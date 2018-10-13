@@ -1,6 +1,14 @@
 <html>
     <head>
         <title>My Simple Site</title>
+         <script>
+         if('serviceWorker' in navigator) {
+           navigator.serviceWorker
+                    .register('/sw.js')
+                    .then(function(registration) { console.log("Service Worker Registered with scope: " + registration.scope); })
+                    .catch(function(error) { console.log("Service Worker Registration failed with error: "+ error); });
+         }
+         </script>
         <script>
 // and here's the trick (works everywhere)
 function r(f) { /in/.test(document.readyState) ? setTimeout('r(' + f + ')', 9) : f() }
