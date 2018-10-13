@@ -1,0 +1,15 @@
+{
+  "name": "ldd-pwa",
+  "version": "1.0.0",
+  "description": "showing how to go from website to PWA using Lighthouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ws --spa index.html"
+  },
+  "author": "David LACOURT <david.lacourt@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "local-web-server": "2.6.0"
+  }
+}

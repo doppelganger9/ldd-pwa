@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>My Simple Site</title>
+        <script>
+// and here's the trick (works everywhere)
+function r(f) { /in/.test(document.readyState) ? setTimeout('r(' + f + ')', 9) : f() }
+// use like
+r(function () {
+    // VanillaJS FTW!
+    var body = document.querySelector('body')
+    appendTo(body, 'h1', 'Hello World')
+    appendTo(body, 'h2', 'TODO');
+    appendTodoTo(body, true, 'Run Lighthouse Audit');
+    appendTo(body, 'h3', 'Changes on the website');
+    appendTodoTo(body, false, 'add &lt;noscript&gt;');
+    appendTodoTo(body, false, 'add Service Worker (to handle offline)');
+    appendTodoTo(body, false, 'add Manifest');
+    appendTodoTo(body, false, 'add&lt;meta name="viewport"&gt;');
+    appendTodoTo(body, false, 'add&lt;meta name="theme-color"&gt;');
+    appendTodoTo(body, false, 'HTML doctype');
+    appendTo(body, 'h3', 'changes on the server side');
+    appendTodoTo(body, true, 'serve with HTTPS');
+    appendTodoTo(body, false, 'redirect HTTP to HTTPS');
+    appendTodoTo(body, false, 'serve with HTTP/2');
+});
+function appendTo(root, tagName, text) {
+    var tag = document.createElement(tagName);
+    tag.appendChild(document.createTextNode(text));
+    root.appendChild(tag);
+}
+function appendTodoTo(root, checked, labelText) {
+    var input = document.createElement('input');
+    input.type='checkbox';
+    checked && (input.checked='checked');
+    var label = document.createElement('label');
+    label.appendChild(document.createTextNode(labelText));
+    var br = document.createElement('br');
+    root.appendChild(input);
+    root.appendChild(label);
+    root.appendChild(br);
+}
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
