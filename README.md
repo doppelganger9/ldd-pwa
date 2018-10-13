@@ -164,6 +164,18 @@ We need to update the sw.js to include the icons to be cached, also.
 - Configured custom splash screen
 - the short_name won't be truncated on the homescreen
 
+### Step 4: fixing viewport error & content size
+
+"Does not have a <meta name="viewport"> tag with width or initial-scale"
+Let's add this to our index.html
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+Turns out it also fix another error: "Content is sized correctly for the viewport"
+
+### PWA Score 73 to 85
+
 ## Logo
 
 From here: https://github.com/webmaxru/progressive-web-apps-logo/issues/4
