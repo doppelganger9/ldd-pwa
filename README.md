@@ -102,6 +102,68 @@ We updated our npm script to use this method.
 
 Wow. Just Adding SSL/TLS and using a basic Service Worker that caches resources for offline usage bumped up our PWA score from 27 to 58.
 
+## Step 3: fixing next issue, adding a Manifest
+
+What is a [Manifest](https://developer.mozilla.org/docs/Web/Manifest)?
+
+### Adding the manifest
+
+In index.html:
+```html
+  <link rel="manifest" href="/manifest.webmanifest">
+```
+
+The manifest file itself:
+```json
+{
+  "name": "LDD-PWA",
+  "short_name": "LDDPWA",
+  "start_url": "index.html?pwa=true",
+  "display": "standalone",
+  "background_color": "#f0f",
+  "theme_color": "#f0f",
+  "description": "From zero to hero PWA!",
+  "icons": [{
+    "src": "favicons/favicon-48.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "favicons/favicon-72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "favicons/favicon-96.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "favicons/favicon-144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "favicons/favicon-168.png",
+    "sizes": "168x168",
+    "type": "image/png"
+  }, {
+    "src": "favicons/favicon-192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "favicons/pwa-logo.png",
+    "sizes": "512x512"
+  }]
+}
+```
+Then we restart our web server and run the Audit again.
+We can also check on Application> Manifest in Chrome Dev Tools to see if the manifest is loaded.
+
+We need to update the sw.js to include the icons to be cached, also.
+
+### PWA Score: 58 to 73
+
+- User can be prompted to install the app
+- Configured custom splash screen
+- the short_name won't be truncated on the homescreen
+
 ## Logo
 
 From here: https://github.com/webmaxru/progressive-web-apps-logo/issues/4

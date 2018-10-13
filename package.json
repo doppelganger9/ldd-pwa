@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ws --spa index.html",
+    "start": "ws --https",
     "audit": "concurrently --kill-others npm:audit-*",
     "audit-start-server": "npm run start",
     "audit-start-lighthouse": "lighthouse --output json --output-path ./lighthouse-report.json --chrome-flags=\"--headless --no-sandbox\" http://localhost:8000"

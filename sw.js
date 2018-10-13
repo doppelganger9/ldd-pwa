@@ -6,10 +6,20 @@
 // To check this, use the Developer Console / Application / cache.
 this.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open('v2').then(function(cache) {
       return cache.addAll([
         '/index.html',
         '/',
+        // now that we also have the manifest using icons...
+        '/manifest.webmanifest',
+        '/index.html?pwa=true',
+        '/favicon.ico',
+        '/favicons/favicon-144.png',
+        '/favicons/favicon-196.png',
+        '/favicons/favicon-96.png',
+        '/favicons/favicon-64.png',
+        '/favicons/favicon-32.png',
+        '/favicons/pwa-logo.png',
       ]);
     })
   );
