@@ -2,6 +2,12 @@
 
 Lighthouse Development Driven PWA
 
+![Lighthouse Score](lighthouse-pwa-100.png)
+
+## How to use this repository
+
+You are seeing the latest revision. If you want to replay step by step, start back to the first commit and checkout each one consecutively.
+
 ## Step 1
 
 Run Audit from Chrome.
@@ -218,6 +224,12 @@ sudo ssh -i {path to my SSH key for remote server} -L localhost:80:127.0.0.1:800
 sudo ssh -i {path to my SSH key for remote server} -L localhost:443:127.0.0.1:8443 {remote_user_name}@{remote_machine_ip} -Nnt
 # then I open Chrome and go to http://localhost which gets redirected to https://localhost, and run the Lighthouse Audit
 ```
+
+### Finishing touches
+
+I added other things for SEO, Accessibility, etc.
+Just look at the differences in the commit history.
+I won't go into details because it is not related to obtaining the 100 score on PWA.
 
 ## Logo
 

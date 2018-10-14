@@ -1,8 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>My Simple Site</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#f0f">
+        <meta name="Description" content="Lighthouse Driven Development Progressive Web Application">
         <link rel="manifest" href="/manifest.webmanifest">
         <script>
          if('serviceWorker' in navigator) {
@@ -23,11 +25,11 @@ r(function () {
     appendTo(body, 'h2', 'TODO');
     appendTodoTo(body, true, 'Run Lighthouse Audit');
     appendTo(body, 'h3', 'Changes on the website');
-    appendTodoTo(body, false, 'add &lt;noscript&gt;');
+    appendTodoTo(body, false, 'add noscript');
     appendTodoTo(body, false, 'add Service Worker (to handle offline)');
     appendTodoTo(body, false, 'add Manifest');
-    appendTodoTo(body, false, 'add&lt;meta name="viewport"&gt;');
-    appendTodoTo(body, false, 'add&lt;meta name="theme-color"&gt;');
+    appendTodoTo(body, false, 'add meta name="viewport"');
+    appendTodoTo(body, false, 'add meta name="theme-color"');
     appendTodoTo(body, false, 'HTML doctype');
     appendTo(body, 'h3', 'changes on the server side');
     appendTodoTo(body, true, 'serve with HTTPS');
@@ -42,13 +44,25 @@ function appendTo(root, tagName, text) {
 function appendTodoTo(root, checked, labelText) {
     var input = document.createElement('input');
     input.type='checkbox';
+    input.id='todo_' + generateUID();
     checked && (input.checked='checked');
     var label = document.createElement('label');
+    label.htmlFor = input.id;
     label.appendChild(document.createTextNode(labelText));
     var br = document.createElement('br');
     root.appendChild(input);
     root.appendChild(label);
     root.appendChild(br);
+}
+// https://stackoverflow.com/a/6248722/526660
+function generateUID() {
+    // I generate the UID from two parts here 
+    // to ensure the random number provide enough bits.
+    var firstPart = (Math.random() * 46656) | 0;
+    var secondPart = (Math.random() * 46656) | 0;
+    firstPart = ("000" + firstPart.toString(36)).slice(-3);
+    secondPart = ("000" + secondPart.toString(36)).slice(-3);
+    return firstPart + secondPart;
 }
         </script>
     </head>
