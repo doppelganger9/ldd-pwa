@@ -1,6 +1,6 @@
 # LDD PWA
 
-Lighthouse Development Driven PWA
+[Lighthouse Development Driven PWA](https://ldd-pwa.firebaseapp.com/)
 
 ![Lighthouse Score](lighthouse-pwa-100.png)
 

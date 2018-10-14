@@ -25,16 +25,16 @@ r(function () {
     appendTo(body, 'h2', 'TODO');
     appendTodoTo(body, true, 'Run Lighthouse Audit');
     appendTo(body, 'h3', 'Changes on the website');
-    appendTodoTo(body, false, 'add noscript');
-    appendTodoTo(body, false, 'add Service Worker (to handle offline)');
-    appendTodoTo(body, false, 'add Manifest');
-    appendTodoTo(body, false, 'add meta name="viewport"');
-    appendTodoTo(body, false, 'add meta name="theme-color"');
-    appendTodoTo(body, false, 'HTML doctype');
+    appendTodoTo(body, true, 'add noscript');
+    appendTodoTo(body, true, 'add Service Worker (to handle offline)');
+    appendTodoTo(body, true, 'add Manifest');
+    appendTodoTo(body, true, 'add meta name="viewport"');
+    appendTodoTo(body, true, 'add meta name="theme-color"');
+    appendTodoTo(body, true, 'HTML doctype');
     appendTo(body, 'h3', 'changes on the server side');
     appendTodoTo(body, true, 'serve with HTTPS');
-    appendTodoTo(body, false, 'redirect HTTP to HTTPS');
-    appendTodoTo(body, false, 'serve with HTTP/2');
+    appendTodoTo(body, true, 'redirect HTTP to HTTPS');
+    appendTodoTo(body, true, 'serve with HTTP/2');
 });
 function appendTo(root, tagName, text) {
     var tag = document.createElement(tagName);
