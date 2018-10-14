@@ -176,6 +176,49 @@ Turns out it also fix another error: "Content is sized correctly for the viewpor
 
 ### PWA Score 73 to 85
 
+### Step 6: meta theme-color
+
+We'll add a meta theme-color to our index.html file:
+```html
+<meta name="theme-color" content="#f0f">
+```
+
+This earns us a few more points to our PWA Score (3 points).
+
+### Step 5: noscript
+
+"Does not provide fallback content when JavaScript is not available"
+
+We will simply add a NOSCRIPT tag in our index.html:
+```html
+<noscript>JavaScript is required for this application to work.</noscript>
+```
+
+### Last step: redirecting HTTP to HTTPS
+
+Now we need to redirect HTTP traffic to HTTPS.
+This should be done at the web server level, with some redirect rule in an Apache/NGINX or IIS.
+
+See [this issue for local-web-server](https://github.com/lwsjs/local-web-server/issues/86).
+Just follow the instructions to use it in our project for development.
+
+I will not (yet) go further on another HTTP server configuration & installation.
+(for example, using Docker to have an NGINX linked to an Express server etc.)
+
+### PWA 💯
+
+With those last elements we hit the 100 mark.
+
+To be sure, you have to use ports 80 and 443, so for my part, I had to do some port mapping.
+My remote web server is on the cloud and I used SSH like this:
+```
+# on the remote, I launch `npm run start` which starts the HTTP server (which redirect to HTTPS) and the HTTPS server.
+# then on the local server, I run those 2:
+sudo ssh -i {path to my SSH key for remote server} -L localhost:80:127.0.0.1:8000 {remote_user_name}@{remote_machine_ip} -Nnt
+sudo ssh -i {path to my SSH key for remote server} -L localhost:443:127.0.0.1:8443 {remote_user_name}@{remote_machine_ip} -Nnt
+# then I open Chrome and go to http://localhost which gets redirected to https://localhost, and run the Lighthouse Audit
+```
+
 ## Logo
 
 From here: https://github.com/webmaxru/progressive-web-apps-logo/issues/4
