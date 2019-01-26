@@ -2,6 +2,8 @@
 
 [Lighthouse Driven Development PWA](https://ldd-pwa.firebaseapp.com/)
 
+[![Build Status](https://travis-ci.org/doppelganger9/ldd-pwa.svg?branch=master)](https://travis-ci.org/doppelganger9/ldd-pwa)
+
 ![Lighthouse Score](lighthouse-pwa-100.png)
 
 ## How to use this repository
