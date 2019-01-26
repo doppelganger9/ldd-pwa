@@ -1,6 +1,6 @@
 # LDD PWA
 
-[Lighthouse Development Driven PWA](https://ldd-pwa.firebaseapp.com/)
+[Lighthouse Driven Development PWA](https://ldd-pwa.firebaseapp.com/)
 
 ![Lighthouse Score](lighthouse-pwa-100.png)
 
@@ -238,4 +238,8 @@ From here: https://github.com/webmaxru/progressive-web-apps-logo/issues/4
 ## Favicons
 
 http://favicons.fr/bfb48b598cc988e28990123d1cd81969.htm#Preview
+
+## One More thing (or more)
+
+This dumb PWA has Continuous Integration and Deployment with [Travis CI](http://travis-ci.org) that will build & deploy to [Firebase Hosting](https://firebase.google.com/products/hosting/), and also then [Lighthouse CI bot](https://github.com/ebidel/lighthouse-ci) will check that the scores are 💯 in the PRs.
 
