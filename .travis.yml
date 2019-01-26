@@ -18,3 +18,4 @@ script:
 #
 after_success:
 - firebase deploy --token $FIREBASE_TOKEN --non-interactive
+- npm run lh -- https://ldd-pwa.firebaseapp.com/
