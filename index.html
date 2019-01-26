@@ -35,6 +35,11 @@ r(function () {
     appendTodoTo(body, true, 'serve with HTTPS');
     appendTodoTo(body, true, 'redirect HTTP to HTTPS');
     appendTodoTo(body, true, 'serve with HTTP/2');
+    appendTo(body, 'h3', 'Optional : CI/CD with Lighthouse running as a bot to check PRs');
+    appendTodoTo(body, true, 'integration with Travis-CI');
+    appendTodoTo(body, true, 'deploy to Firebase Hosting');
+    appendTodoTo(body, false, 'show current version: {{TRAVIS_COMMIT}}');
+    appendTodoTo(body, false, 'add Lighthouse CI check on PRs');
 });
 function appendTo(root, tagName, text) {
     var tag = document.createElement(tagName);
@@ -56,7 +61,7 @@ function appendTodoTo(root, checked, labelText) {
 }
 // https://stackoverflow.com/a/6248722/526660
 function generateUID() {
-    // I generate the UID from two parts here 
+    // I generate the UID from two parts here
     // to ensure the random number provide enough bits.
     var firstPart = (Math.random() * 46656) | 0;
     var secondPart = (Math.random() * 46656) | 0;

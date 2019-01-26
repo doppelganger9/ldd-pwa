@@ -9,7 +9,8 @@ before_script:
 - npm install -g firebase-tools
 
 script:
-- echo "dumb PWA does not even use a build tool like webpack!"
+- echo "dumb PWA does not even use a build tool like webpack! Just fiddling with sed to inject the commit deployed to Firebase Hosting"
+- sed -i "s/{{TRAVIS_COMMIT}}/$TRAVIS_COMMIT/g" index.html
 
 #
 # Please note that this will deploy all PRs to the Firebase Hosting, which can be potentially dangerous for malicious PRs.
