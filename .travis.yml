@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- node
+
+install:
+- npm install
+
+before_script:
+- npm install -g firebase-tools
+
+script:
+- echo "dumb PWA does not even use a build tool like webpack!"
+
+#
+# Please note that this will deploy all PRs to the Firebase Hosting, which can be potentially dangerous for malicious PRs.
+# So in a real app, you would also have a "production" deploy step, and this one would be for "staging".
+#
+after_success:
+- firebase deploy --token $FIREBASE_TOKEN --non-interactive
