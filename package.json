@@ -17,7 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^4.0.1",
-    "firebase-tools": "^6.7.2",
+    "firebase-tools": "^7.0.2",
     "lighthouse": "^3.2.1",
     "lighthousebot": "git+https://github.com/GoogleChromeLabs/lighthousebot.git",
     "local-web-server": "2.6.0"
