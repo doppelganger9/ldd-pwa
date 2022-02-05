@@ -44,7 +44,7 @@ r(function () {
     appendTodoTo(body, true, 'deploy to Firebase Hosting');
     appendTodoTo(body, true, 'show current version: {{REPLACE_THIS_WITH_COMMIT_HASH}}');
     appendTodoTo(body, true, 'replace Travis-CI with GitHub Actions');
-    appendTodoTo(body, false, 'add Lighthouse CI check on PRs');
+    appendTodoTo(body, true, 'add Lighthouse CI check on PRs');
 });
 function appendTo(root, tagName, text) {
     var tag = document.createElement(tagName);
