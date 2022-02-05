@@ -233,6 +233,13 @@ I added other things for SEO, Accessibility, etc.
 Just look at the differences in the commit history.
 I won't go into details because it is not related to obtaining the 100 score on PWA.
 
+## 2022 update
+
+3 things were added to go back to a perfect 💯 :
+- apple-touch-icon (see index.html)
+- maskable icons (see webmanifest)
+- `robots.txt` file for SEO allowing indexation
+
 ## Logo
 
 From here: https://github.com/webmaxru/progressive-web-apps-logo/issues/4
