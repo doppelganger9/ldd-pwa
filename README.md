@@ -2,7 +2,6 @@
 
 [Lighthouse Driven Development PWA](https://ldd-pwa.firebaseapp.com/)
 
-[![Build Status](https://travis-ci.org/doppelganger9/ldd-pwa.svg?branch=master)](https://travis-ci.org/doppelganger9/ldd-pwa)
 
 ![Lighthouse Score](lighthouse-pwa-100.png)
 
@@ -249,5 +248,5 @@ http://favicons.fr/bfb48b598cc988e28990123d1cd81969.htm#Preview
 
 ## One More thing (or more)
 
-This dumb PWA has Continuous Integration and Deployment with [Travis CI](http://travis-ci.org) that will build & deploy to [Firebase Hosting](https://firebase.google.com/products/hosting/), and also then [Lighthouse CI bot](https://github.com/ebidel/lighthouse-ci) will check that the scores are 💯 in the PRs.
+This dumb PWA has Continuous Integration and Deployment with GitHub Actions that will build & deploy to [Firebase Hosting](https://firebase.google.com/products/hosting/), and also then [Lighthouse CI](https://github.com/ebidel/lighthouse-ci) will check that the scores are 💯.
 
