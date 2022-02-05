@@ -6,20 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently npm:start-*",
-    "start-http2-server": "ws",
-    "start-http-https-redirect-server": "ws -c lws.redirect.config.js",
+    "start-http2-server": "lws",
+    "start-http-https-redirect-server": "lws -c lws.redirect.config.js",
     "audit": "concurrently --kill-others npm:audit-*",
     "audit-start-servers": "npm run start",
     "audit-start-lighthouse": "lighthouse --output json --output-path ./lighthouse-report.json --chrome-flags=\"--headless --no-sandbox\" http://localhost:8000",
-    "lh": "lighthousebot"
+    "lh": "lhci autorun"
   },
   "author": "David LACOURT <david.lacourt@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "5.3.0",
-    "firebase-tools": "9.3.0",
-    "lighthouse": "7.4.0",
-    "lighthousebot": "git+https://github.com/GoogleChromeLabs/lighthousebot.git",
-    "local-web-server": "2.6.0"
+    "concurrently": "7.0.0",
+    "firebase-tools": "10.1.4",
+    "lighthouse": "9.3.1",
+    "local-web-server": "5.1.1",
+    "lws-mock-response": "2.0.0",
+    "lws-redirect": "2.1.2"
   }
 }
