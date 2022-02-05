@@ -1,7 +1,9 @@
 module.exports = {
-  stack: ['./redirect-everything.js'],
+  stack: [
+    'lws-redirect',
+  ],
   port: 8000,
-  redirectPort: 8443,
   logFormat: 'combined',
+  redirect: 'http(s?)://(.+):8000 -> https://$2:8443',
 };
 

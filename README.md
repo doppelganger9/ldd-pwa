@@ -207,8 +207,7 @@ We will simply add a NOSCRIPT tag in our index.html:
 Now we need to redirect HTTP traffic to HTTPS.
 This should be done at the web server level, with some redirect rule in an Apache/NGINX or IIS.
 
-See [this issue for local-web-server](https://github.com/lwsjs/local-web-server/issues/86).
-Just follow the instructions to use it in our project for development.
+We use 2 [Local Web Server](https://github.com/lwsjs/local-web-server) instances, one is redirecting everything to HTTPS, the other serves our local app throught HTTP2 and SSL.
 
 I will not (yet) go further on another HTTP server configuration & installation.
 (for example, using Docker to have an NGINX linked to an Express server etc.)
