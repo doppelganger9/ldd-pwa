@@ -17,6 +17,13 @@ jobs:
           echo "dumb PWA does not even use a build tool like webpack! Just fiddling with sed to inject the commit deployed to Firebase Hosting"
           sed -i "s/{{REPLACE_THIS_WITH_COMMIT_HASH}}/$(git rev-parse --short "$GITHUB_SHA")/g" index.html
 
+      - name: run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.8.x
+          lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
