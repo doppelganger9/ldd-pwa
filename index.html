@@ -42,9 +42,9 @@ r(function () {
     appendTo(body, 'h3', 'Optional : CI/CD with Lighthouse running as a bot to check PRs');
     appendTodoTo(body, true, 'integration with Travis-CI');
     appendTodoTo(body, true, 'deploy to Firebase Hosting');
-    appendTodoTo(body, false, 'show current version: {{REPLACE_THIS_WITH_COMMIT_HASH}}');
-    appendTodoTo(body, false, 'add Lighthouse CI check on PRs');
+    appendTodoTo(body, true, 'show current version: {{REPLACE_THIS_WITH_COMMIT_HASH}}');
     appendTodoTo(body, true, 'replace Travis-CI with GitHub Actions');
+    appendTodoTo(body, false, 'add Lighthouse CI check on PRs');
 });
 function appendTo(root, tagName, text) {
     var tag = document.createElement(tagName);
