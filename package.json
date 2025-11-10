@@ -17,7 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "concurrently": "7.0.0",
-    "firebase-tools": "11.29.1",
+    "firebase-tools": "14.24.1",
     "lighthouse": "9.3.1",
     "local-web-server": "5.1.1",
     "lws-mock-response": "2.0.0",
